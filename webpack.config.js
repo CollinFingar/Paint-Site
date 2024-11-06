@@ -3,11 +3,7 @@ const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const webpack = require('webpack');
 
-module.exports = (env) => {
-  const isProduction = env.NODE_ENV === 'prod';
-  const dotenvFilename = isProduction ? '.env.prod' : '.env.dev';
-
-  return {
+module.exports = {
     mode: 'development',
     entry: './src/index.js',
     output: {
@@ -40,7 +36,7 @@ module.exports = (env) => {
         template: './public/index.html',
       }),
       new Dotenv({
-        path: dotenvFilename,
+        path: '.env',
       }),
     ],
     devServer: {
@@ -51,4 +47,3 @@ module.exports = (env) => {
       open: true,
     },
   };
-}
