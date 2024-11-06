@@ -7,13 +7,21 @@ import Gallery from '../gallery/Gallery';
 import Footer from '../footer/Footer';
 import { BrowserRouter } from 'react-router-dom'
 
+async function callNetlifyFunction() {
+    try {
+      const response = await fetch('/.netlify/functions/retrieveData');
+      const data = await response.json();
+      console.log(data); // Handle the response data
+    } catch (error) {
+      console.error('Error calling Netlify function:', error);
+    }
+  }
+
 
 const App = () => {
 
     useEffect(() => {
-        fetch(`https://cdn.contentful.com/spaces/cj6ju1ololnf/environments/master/entries?access_token=${process.env.REACT_APP_ACCESS_TOKEN}`)
-            .then(response => response.json())
-            .then(data => console.log(data));
+        callNetlifyFunction();
     }, []);
 
     return (
