@@ -5,6 +5,8 @@ import Landing from '../landing/Landing';
 import Guide from '../guide/Guide';
 import Gallery from '../gallery/Gallery';
 import Footer from '../footer/Footer';
+import { BrowserRouter } from 'react-router-dom'
+
 
 const App = () => {
 
@@ -14,12 +16,15 @@ const App = () => {
             .then(data => console.log(data));
     }, []);
 
-    return (<AppWrapper>
-        <Header />
-        <Landing />
-        <Guide />
-        <Gallery />
-        <Footer />
-    </AppWrapper>)
+    return (
+    <BrowserRouter>
+        <AppWrapper>
+            <Header />
+            <Landing />
+            <Guide />
+            <Gallery />
+            <Footer />
+        </AppWrapper>
+    </BrowserRouter>)
 };
 export default App;

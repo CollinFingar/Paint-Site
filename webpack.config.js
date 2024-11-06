@@ -7,6 +7,7 @@ module.exports = {
     mode: 'development',
     entry: './src/index.js',
     output: {
+      publicPath: '/',
       filename: 'bundle.js',
     },
     module: {
@@ -45,5 +46,6 @@ module.exports = {
       },
       hot: true,
       open: true,
+      historyApiFallback: true
     },
   };
