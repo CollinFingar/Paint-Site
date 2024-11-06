@@ -5,6 +5,8 @@ const Header = () => {
 
     useEffect(() => {}, []);
 
-    return (<HeaderWrapper>Header</HeaderWrapper>)
+    return (<HeaderWrapper>
+        <span>Skipper's Paintings</span>
+    </HeaderWrapper>)
 };
 export default Header;
