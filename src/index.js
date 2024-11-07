@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Sora', sans-serif;
     padding: 0;
     margin: 0;
-    background: ${COLORS.alabaster};
+    background: ${COLORS.background};
     color: black;
     box-sizing: border-box;
   }

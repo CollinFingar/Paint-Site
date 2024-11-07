@@ -1,7 +1,6 @@
 export const COLORS = {
-    midnightGreen: "#114b5fff",
-    bitterSweet: "#ed6a5aff",
-    lemonChiffon: "#f4f1bbff",
-    ashGrey: "#9bc1bcff",
-    alabaster: "#e6ebe0ff"
+    background: "#eae7c7",
+    h1: "#333432",
+    h2: "#ed5546",
+    h3: "#45b1af"
 };

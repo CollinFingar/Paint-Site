@@ -5,7 +5,12 @@ import Landing from '../landing/Landing';
 import Guide from '../guide/Guide';
 import Gallery from '../gallery/Gallery';
 import Footer from '../footer/Footer';
-import { BrowserRouter } from 'react-router-dom'
+import About from '../about/About';
+import {
+    Route,
+    BrowserRouter,
+    Routes
+} from 'react-router-dom'
 
 async function callNetlifyFunction() {
     try {
@@ -26,11 +31,16 @@ const App = () => {
 
     return (
     <BrowserRouter>
+        <Header />
+
         <AppWrapper>
-            <Header />
-            <Landing />
-            <Guide />
-            <Gallery />
+            <Routes>
+                <Route path="/" Component={Landing} />
+                <Route path="/guide" Component={Guide} />
+                <Route path="/gallery" Component={Gallery} />
+                <Route path="/about" Component={About} />
+                <Route path="/recipes" Component={Landing} />
+            </Routes>
             <Footer />
         </AppWrapper>
     </BrowserRouter>)

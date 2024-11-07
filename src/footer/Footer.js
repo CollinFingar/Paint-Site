@@ -6,7 +6,7 @@ const Footer = () => {
     useEffect(() => {}, []);
 
     return (<FooterWrapper>
-        <span>Footer</span>
+        <span>Created by <b>Collin Fingar</b></span>
     </FooterWrapper>)
 };
 export default Footer;
