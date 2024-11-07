@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { CardWrapper } from './Card.style.js';
+import { CardWrapper } from './card.style.js';
 
 const Card = ({children, color}) => {
 
