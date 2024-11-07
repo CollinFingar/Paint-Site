@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { SectionWrapper } from './Section.style.js';
+import { SectionWrapper } from './section.style.js';
 
 const Section = ({children, color}) => {
 
